@@ -43,7 +43,9 @@ const useStyles = makeStyles({
     marginLeft: 20,
   },
 });
-
+const Alert = (event) => {
+  alert("Request has been sent");
+};
 function Services() {
   const classes = useStyles();
   return (
@@ -56,7 +58,7 @@ function Services() {
         </Typography>
         <Grid container spacing={2}>
           <Grid item xs={2.2}>
-            <Card className={classes.card} elevation={10}>
+            <Card className={classes.card} elevation={10} onClick={Alert}>
               <CardMedia className={classes.media} image={Grooming}></CardMedia>
               <CardContent>
                 <Typography variant="h6" component="h3">
@@ -66,7 +68,7 @@ function Services() {
             </Card>
           </Grid>
           <Grid item xs={2.5}>
-            <Card className={classes.card} elevation={10}>
+            <Card className={classes.card} elevation={10} onClick={Alert}>
               <CardMedia className={classes.media} image={Checkup}></CardMedia>
               <CardContent>
                 <Typography variant="h6" component="h3">
@@ -79,7 +81,7 @@ function Services() {
             </Card>
           </Grid>
           <Grid item xs={2.5}>
-            <Card className={classes.card} elevation={10}>
+            <Card className={classes.card} elevation={10} onClick={Alert}>
               <CardMedia
                 className={classes.media}
                 image={Vaccination}
